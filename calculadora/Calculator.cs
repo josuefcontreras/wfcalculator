@@ -38,16 +38,19 @@ namespace calculadora
             buttonResta.Location = new Point(70, 80);
             buttonResta.Size = new Size(50, 20);
             buttonResta.Text = "-";
+            buttonResta.Click += new EventHandler(operadorButton_Click);
 
             Button buttonMultiplicacion = new Button();
             buttonMultiplicacion.Location = new Point(130, 80);
             buttonMultiplicacion.Size = new Size(50, 20);
             buttonMultiplicacion.Text = "*";
+            buttonMultiplicacion.Click += new EventHandler(operadorButton_Click);
 
             Button buttonDivision = new Button();
             buttonDivision.Location = new Point(190, 80);
             buttonDivision.Size = new Size(50, 20);
             buttonDivision.Text = "/";
+            buttonDivision.Click += new EventHandler(operadorButton_Click);
 
             Button buttonSalir = new Button();
             buttonSalir.Location = new Point(10, 105);
