@@ -58,15 +58,30 @@ namespace calculadora
             buttonSalir.Text = "Salir";
             buttonSalir.Click += new EventHandler(cerrarFormulario);
 
+            Label labelValor1 = new Label();
+            labelValor1.Text = "Valor 1";
+            labelValor1.Size = new Size(93, 20);
+            labelValor1.Location = new Point(10, 30);
+
             TextBox textBoxValor1 = new TextBox();
             textBoxValor1.Location = new Point(10, 50);
             textBoxValor1.Size = new Size(93, 20);
             textBoxValor1.TextChanged += new EventHandler(textBoxValor1_Change);
 
+            Label labelValor2 = new Label();
+            labelValor2.Text = "Valor 2";
+            labelValor2.Size = new Size(93, 20);
+            labelValor2.Location = new Point(113, 30);
+
             TextBox textBoxValor2 = new TextBox();
             textBoxValor2.Location = new Point(113, 50);
             textBoxValor2.Size = new Size(93, 20);
             textBoxValor2.TextChanged += new EventHandler(textBoxValor2_Change);
+
+            Label labelResultado = new Label();
+            labelResultado.Text = "Resultado";
+            labelResultado.Size = new Size(93, 20);
+            labelResultado.Location = new Point(216, 30);
 
             TextBox textBoxResultado = new TextBox();
             textBoxResultado.Location = new Point(216, 50);
@@ -74,7 +89,12 @@ namespace calculadora
             textBoxResultado.ReadOnly = true;
             textBoxResultado.Name = "textBoxResultado";
 
-            this.Controls.AddRange(new Control[] {buttonSuma, buttonResta, buttonDivision, buttonMultiplicacion, buttonSalir, textBoxValor1, textBoxValor2, textBoxResultado });
+            this.Controls.AddRange(new Control[] {
+                buttonSuma, buttonResta, buttonDivision, 
+                buttonMultiplicacion, buttonSalir, labelValor1, 
+                labelValor2, labelResultado, textBoxValor1, 
+                textBoxValor2, textBoxResultado 
+            });
         }
         public void textBoxValor1_Change(object sender, EventArgs e)
         {
